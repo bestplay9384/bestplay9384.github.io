@@ -2,7 +2,7 @@
 ## with jQuery.flot
 
 # How to use
-- files with data HAS to be on the server. Loading files with file:// locally does not work - javascript fault. http:// links are allowed!
+- files with data HAS to be on the server. Loading files with file:// locally does not work - javascript fault. http:// links are allowed, but remote server you're using has to have cross-domain Ajax switched on - put it in .htaccess "Header set Access-Control-Allow-Origin *".
 - GET parameter "files" stores chart content data pointers. How to use it?
 	- there are used 3 parameters per chart
 	- FILE_WITH_DATA.ext:LABEL_FOR_CHART:NUMBER_OF_Y_AXIS
