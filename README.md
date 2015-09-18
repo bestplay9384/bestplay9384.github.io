@@ -2,7 +2,7 @@
 ## with jQuery.flot
 
 # How to use
-- files with data HAS to be on the server. Loading files with file:// locally does not work - javascript fault.
+- files with data HAS to be on the server. Loading files with file:// locally does not work - javascript fault. http:// links are allowed!
 - GET parameter "files" stores chart content data pointers. How to use it?
 	- there are used 3 parameters per chart
 	- FILE_WITH_DATA.ext:LABEL_FOR_CHART:NUMBER_OF_Y_AXIS
@@ -12,13 +12,13 @@
 # Example usage:
 1)
 ```bash
-./index.html?files=FILE1.txt:Label1:1
+./index.html?files=FILE1.txt,Label1,1
 ```
 means load data from FILE1.txt (it can be full URL), make label Label1 for this data on chart and use percentage Y Axis (1 means that)
 
 2)
 ```bash
-./index.html?files=FILE1.txt:Label1:1;FILE2.txt:Label2:1
+./index.html?files=FILE1.txt,Label1,1;FILE2.txt,Label2,1
 ```
 means:
 - load data from FILE1.txt labelled with Label1 and use percentage Y Axis
@@ -26,7 +26,7 @@ means:
 
 3)
 ```bash
-./index.html?files=FILE1.txt:Label1:1;FILE2.txt:Label2:1;FILE3.txt:Label3:2
+./index.html?files=FILE1.txt,Label1,1;FILE2.txt,Label2,1;FILE3.txt,Label3,2
 ```
 means:
 - all the same like in 2nd example

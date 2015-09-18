@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2015 Free Construction Sp. z.o.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 $(function() {
 		
 		function getUrlParameter(sParam) {
@@ -81,13 +97,13 @@ $(function() {
 			var urlFiles = getParam.split(';');
 			if(urlFiles.length > 1) {
 				for(var i=0; i<urlFiles.length; i++) {
-					var filePath = urlFiles[i].split(':')[0];
-					var fileLabel = urlFiles[i].split(':')[1];
-					var fileAxis = urlFiles[i].split(':')[2];
+					var filePath = urlFiles[i].split(',')[0];
+					var fileLabel = urlFiles[i].split(',')[1];
+					var fileAxis = urlFiles[i].split(',')[2];
 					addDataFromFile(filePath, fileLabel, fileAxis);
 				}
 			} else {
-				addDataFromFile(getParam.split(':')[0], getParam.split(':')[1], getParam.split(':')[2]);
+				addDataFromFile(getParam.split(',')[0], getParam.split(',')[1], getParam.split(',')[2]);
 			}
 		}
 		
